@@ -54,7 +54,7 @@ export const GET_MOVIE_BY_ID = gql`
       actors
       ratingsAverage
       ratingsQuantity
-      ratings {
+      reviews {
         _id
         rating
         review

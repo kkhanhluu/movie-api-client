@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { GET_MOVIES } from '../../queries';
 import MovieCard from './MovieCard/MovieCard';
 import classes from './MovieList.module.scss';

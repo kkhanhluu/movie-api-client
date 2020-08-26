@@ -1,0 +1,97 @@
+.container {
+  height: 130vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.cardContainer {
+  font-family: 'Lato', sans-serif;
+  border-radius: 3px;
+  background: #141411;
+  margin: 4% auto;
+  display: flex;
+  width: 75%;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .dataContainer {
+    padding: 4rem 5rem;
+    width: 60%;
+    .movieTitle {
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .movieOverview {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-weight: 300;
+      color: #fafafa;
+      margin: 2rem 0;
+      padding: 0;
+      width: 70%;
+    }
+    .additionalInformation {
+      margin-top: 2rem;
+      font-size: 2.2rem;
+      font-family: 'Oswald', sans-serif;
+      .movieGenre {
+        color: #00fc87;
+      }
+      .movieProducers {
+        font-weight: 100;
+      }
+      .releaseDetails {
+        // padding: 0 1.5rem;
+        color: #fafafa;
+        font-size: 1.6rem;
+        line-height: 3.4rem;
+        margin: 3rem 0;
+        .row {
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+        }
+        span {
+          display: block;
+          font-size: 2.5rem;
+          color: #00fc87;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+  .posterContainer {
+    width: 35%;
+    .poster {
+      width: 100%;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+}
+
+.underContainer {
+  background: #010101;
+  .nav {
+    .navItem {
+      width: 20%;
+      height: 4.8rem;
+      padding: 1rem 2.4rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      text-align: center;
+      a {
+        color: #fafafa;
+      }
+    }
+    .active {
+      border-bottom: 5px solid red;
+    }
+  }
+}
+
+.tabContainer {
+  background-color: black;
+}
