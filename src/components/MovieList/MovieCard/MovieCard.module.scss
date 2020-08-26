@@ -1,0 +1,92 @@
+.movie {
+  margin: 1rem 0.625rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  width: 20%;
+  margin-right: 5%;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .moviePosterContainer {
+    background: black;
+    padding: 3rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 287px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.8s ease;
+
+    a {
+      text-decoration: none;
+      color: white;
+      overflow: hidden;
+    }
+  }
+
+  .moviePosterContainer:hover {
+    cursor: pointer;
+    background-size: 150%;
+    transition: all 0.4s ease;
+
+    .movieOverlay {
+      opacity: 1;
+    }
+  }
+
+  .movieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    max-height: 75%;
+    font-size: 1.6rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    padding: 2rem;
+    opacity: 0;
+    text-align: left;
+    overflow: hidden;
+    pointer-events: all;
+    transition: opacity 0.125s ease;
+    border-radius: 10px;
+
+    .movieOverlayTitle {
+      font-size: 2rem;
+      font-weight: 200;
+      transition: opacity 0.25s ease;
+    }
+
+    .movieOverlayVote {
+      transition: opacity 0.25s ease 0.125s;
+      margin: 2rem 0;
+    }
+
+    .movieOverlayOverview {
+      font-weight: 300;
+      line-height: 1.6;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .movieTitle {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem auto;
+    color: var(--color-red);
+    font-size: 1.9rem;
+  }
+  .movieDate {
+    text-align: center;
+    margin: 1rem auto;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,221 @@
+/* header desktop version */
+.header {
+  width: 100%;
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s;
+  padding: 3rem 10%;
+}
+
+@media screen and (max-width: 59.375em) {
+  .header {
+    display: none;
+  }
+}
+
+.filledHeader {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 15px;
+}
+
+/* logo */
+.logo {
+  text-decoration: none;
+  color: var(--color-blue);
+  font-size: 4.5rem;
+  font-family: 'Cookie', cursive;
+
+  img {
+    display: block;
+    width: 20rem;
+    height: 6rem;
+  }
+}
+
+/* right container */
+.rightContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* unorder list */
+.nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+
+.nav ul li {
+  padding: 3rem;
+  color: white;
+}
+
+/* login */
+.login {
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-green);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+
+/* language */
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  position: relative;
+  height: 6rem;
+}
+
+.dropdown {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  margin-top: 6rem;
+}
+
+.language:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.language:hover .dropdown li {
+  margin: 0;
+  display: block;
+  padding: 1rem 0;
+}
+
+.languageOption {
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.en-us {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg);
+}
+.de-de {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2000px-Flag_of_Germany.svg.png);
+}
+.fr-ca {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png);
+}
+/* header in mobile devices */
+.headerMobile {
+  display: none;
+
+  padding: 2rem 8rem;
+  justify-content: space-between;
+  position: relative;
+}
+@media screen and (max-width: 59.375em) {
+  .headerMobile {
+    display: flex;
+  }
+}
+@media screen and (max-width: 30em) {
+  .headerMobile {
+    display: flex;
+    padding: 2rem 3rem;
+  }
+}
+
+.toggleButton {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.toggleInput:checked ~ .navDrawer {
+  transform: translateX(0);
+}
+
+.toggleInput:checked ~ .navDrawerBackground {
+  display: block;
+}
+
+.navDrawerBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.navDrawer {
+  width: 30rem;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.navDrawerInner {
+  padding: 2rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerTop {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.drawerTopLogo {
+  text-decoration: none;
+  color: var(--color-blue);
+  font-size: 4.5rem;
+  font-family: 'Cookie', cursive;
+}
+
+.closeButton {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.drawerItems {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #dfe3e8;
+  border-top: 1px solid #dfe3e8;
+  list-style: none;
+}
+
+.drawItemLink {
+  color: #212b36;
+  padding: 1.5rem 0;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.drawItemLink:hover {
+  color: var(--color-blue);
+}

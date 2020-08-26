@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import MovieDetailPage from './pages/MovieDetailPage';
 import AddMoviePage from './pages/AddMoviePage';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 
 export const App = () => {
   return (

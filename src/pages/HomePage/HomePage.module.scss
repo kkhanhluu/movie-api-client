@@ -1,0 +1,20 @@
+.homepage {
+  background-image: linear-gradient(
+      to top,
+      #221f1f 0%,
+      rgba(34, 31, 31, 0) 100%
+    ),
+    url(https://nintendo-online.de/upload/images/2018/03/16/15036998505aab725512e199-01839946.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movieListContainer {
+  margin-top: -5rem;
+  padding: 0 12%;
+  background: #221f1f;
+  h3 {
+    color: white;
+    font-size: 2rem;
+  }
+}

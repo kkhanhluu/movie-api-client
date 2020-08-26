@@ -6,6 +6,21 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-green: #00d277;
+  --color-red: #ff424f;
+  --color-blue-light: #e5ecf8;
+  --color-grey: #f4f2f2;
+  --color-grey-dark-medium: #dddddd;
+  --color-grey-dark: #85898e;
+  --box-shadow: rgba(77, 140, 245, 0.6) 0px 10px 53px 0px;
+  --font-primary: 'Manrope', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --bp-large: 62.5em;
+  --bp-medium: 50em;
+  --bp-small: 37.5em;
+}
+
 html {
   /* this defines what 1 rem is  */
   font-size: 62.5%;
@@ -13,4 +28,5 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
