@@ -138,6 +138,7 @@
 .toggleButton {
   font-size: 5rem;
   cursor: pointer;
+  color: white;
 }
 
 .toggleInput:checked ~ .navDrawer {
@@ -192,6 +193,11 @@
   color: var(--color-blue);
   font-size: 4.5rem;
   font-family: 'Cookie', cursive;
+}
+@media screen and (max-width: 59.375em) {
+  .drawerTopLogo img {
+    margin: -1rem -2rem 1rem -2rem;
+  }
 }
 
 .closeButton {

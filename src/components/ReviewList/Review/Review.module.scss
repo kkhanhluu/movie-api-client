@@ -1,0 +1,21 @@
+.review {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 1rem 12%;
+  margin: 5rem 0;
+  border-radius: 5px;
+
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .reviewString {
+      margin: 2rem 0;
+    }
+  }
+}

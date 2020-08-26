@@ -5,6 +5,7 @@
   overflow: hidden;
   width: 20%;
   margin-right: 5%;
+
   &:nth-child(4n) {
     margin-right: 0;
   }
@@ -88,5 +89,18 @@
     margin: 1rem auto;
     color: #fff;
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .movie {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie {
+    width: 80%;
+    margin-left: 5rem;
   }
 }

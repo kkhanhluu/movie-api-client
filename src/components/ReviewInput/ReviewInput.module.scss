@@ -1,0 +1,38 @@
+.newReview {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  font-size: 1.6rem;
+  position: relative;
+
+  .row {
+    margin-top: 2rem;
+  }
+
+  span {
+    margin-right: 2rem;
+  }
+
+  .reviewInput {
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .submit {
+    position: absolute;
+    top: 6rem;
+    right: 1.5rem;
+    z-index: 2;
+    background: white;
+    border: none;
+    color: black;
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and(max-width: 800px) {
+  .newReview {
+    width: 100%;
+  }
+}

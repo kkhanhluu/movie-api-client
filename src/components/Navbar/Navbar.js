@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import classes from './Navbar.module.scss';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const isAuthenticated = localStorage.getItem('token') !== null;
+
   return (
     <>
       <header className={classes.header}>
@@ -18,15 +21,27 @@ const Navbar = () => {
               <li className={classes.navItem}>Contact</li>
             </ul>
           </nav>
-          <Link to='/' className={classes.login}>
-            Login
-          </Link>
+          {!isAuthenticated ? (
+            <Link to='/authentication/login' className={classes.login}>
+              Login
+            </Link>
+          ) : (
+            <a
+              href='/authentication/login'
+              onClick={() => {
+                localStorage.removeItem('token');
+              }}
+              className={classes.login}
+            >
+              Sign out
+            </a>
+          )}
         </div>
       </header>
 
       <header className={classes.headerMobile}>
         <Link to='/' className={classes.logo}>
-          Flugwege
+          <img src={require('../../assets/tmdb.svg')} alt='tmdb logo' />
         </Link>
         <label htmlFor='toggle-input' className={classes.toggleButton}>
           <ion-icon name='menu-outline'></ion-icon>
@@ -42,7 +57,11 @@ const Navbar = () => {
         <div id='navDrawer' className={classes.navDrawer}>
           <div className={classes.navDrawerInner}>
             <div className={classes.drawerTop}>
-              <div className={classes.drawerTopLogo}>Flugwege</div>
+              <div className={classes.drawerTopLogo}>
+                <Link to='/' className={classes.logo}>
+                  <img src={require('../../assets/tmdb.svg')} alt='tmdb logo' />
+                </Link>
+              </div>
               <label htmlFor='toggle-input' className={classes.closeButton}>
                 <ion-icon name='close-outline'></ion-icon>
               </label>

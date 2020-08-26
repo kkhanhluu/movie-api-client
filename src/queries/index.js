@@ -127,10 +127,9 @@ export const EDIT_MOVIE = gql`
 export const ADD_REVIEW = gql`
   mutation addRating($movie: String!, $rating: Int!, $review: String!) {
     addReview(movie: $movie, rating: $rating, review: $review) {
-      id
+      _id
       rating
       review
-      user
     }
   }
 `;

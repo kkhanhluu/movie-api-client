@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+.container {
+  background-image: linear-gradient(
+      to top,
+      #bdb7b7 0%,
+      rgba(34, 31, 31, 0) 100%
+    ),
+    url('../../assets/login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 450px;
+    background: #f6f6f6;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+    .banner {
+      position: absolute;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      height: 210px;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+        url('../../assets/login.jpg') center no-repeat;
+      background-size: cover;
+      transform: skew(0deg, -8deg) translateY(-25px);
+      z-index: 2;
+    }
+
+    .banner:before {
+      content: 'Login';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #425680;
+      color: #fff;
+      bottom: -35px;
+      left: 50%;
+      line-height: 80px;
+      font-size: 17px;
+      text-transform: uppercase;
+      border-radius: 50%;
+      text-align: center;
+      transform: skew(0deg, 8deg) translateX(-50%);
+    }
+
+    form {
+      position: absolute;
+      top: 210px;
+      background: #f6f6f6;
+      width: 100%;
+      height: calc(100% - 180px);
+
+      .wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+      }
+
+      .row {
+        margin: 20px 0px;
+
+        .label {
+          font-size: 12px;
+          font-weight: 600;
+          color: rgb(100, 100, 100);
+        }
+        input {
+          margin-top: 2px;
+          font-size: 13px;
+          color: rgb(70, 70, 70);
+          border: none;
+          border-bottom: 1px solid rgba(100, 100, 100, 0.6);
+          outline: none;
+          height: 25px;
+          background: transparent;
+          width: 100%;
+        }
+        button {
+          margin-top: 0px;
+          font-size: 13px;
+          color: rgb(100, 100, 100);
+          border: none;
+          outline: none;
+          height: 40px;
+          text-transform: uppercase;
+          background: #425680;
+          width: 100%;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .signup {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+        bottom: 50px;
+        color: #333;
+
+        a {
+          color: #425680;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

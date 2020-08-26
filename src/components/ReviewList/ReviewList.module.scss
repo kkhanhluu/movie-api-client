@@ -1,0 +1,20 @@
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and(max-width: 800px) {
+  .reviewList {
+    width: 100%;
+  }
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}

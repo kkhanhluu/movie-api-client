@@ -7,12 +7,16 @@ import Navbar from '../../components/Navbar/Navbar';
 import { GET_MOVIE_BY_ID } from '../../queries';
 import classes from './MovieDetailPage.module.scss';
 import ActorList from '../../components/ActorList/ActorList';
+import ReviewList from '../../components/ReviewList/ReviewList';
+import ReviewInput from '../../components/ReviewInput/ReviewInput';
 
 const MovieDetailPage = (props) => {
   const movieId = props.match.params.id;
   const { loading, err, data } = useQuery(GET_MOVIE_BY_ID, {
     variables: { id: movieId },
   });
+
+  const isAuthenticated = localStorage.getItem('token') !== null;
 
   if (data && data.movie) {
     const {
@@ -23,6 +27,7 @@ const MovieDetailPage = (props) => {
       ratingsQuantity,
       releaseDate,
       actors,
+      reviews,
     } = data.movie;
     return (
       <div
@@ -102,7 +107,12 @@ const MovieDetailPage = (props) => {
               <ActorList actors={actors} />
             </TabPanel>
             <TabPanel>
-              <h2>Any content 2</h2>
+              <ReviewList reviews={reviews} />
+              {isAuthenticated ? (
+                <ReviewInput movieId={movieId} />
+              ) : (
+                <h4>Please sign in to add a review!</h4>
+              )}
             </TabPanel>
           </Tabs>
         </div>
