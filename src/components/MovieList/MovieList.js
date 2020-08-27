@@ -4,9 +4,11 @@ import { GET_MOVIES } from '../../queries';
 import MovieCard from './MovieCard/MovieCard';
 import classes from './MovieList.module.scss';
 
-const MovieList = () => {
-  const { loading, err, data } = useQuery(GET_MOVIES);
-  console.log(data);
+const MovieList = (props) => {
+  console.log(props.sortBy);
+  const { loading, err, data } = useQuery(GET_MOVIES, {
+    variables: { sortBy: props.sortBy },
+  });
   if (data && data.movies.length > 0) {
     return (
       <div className={classes.movieList}>

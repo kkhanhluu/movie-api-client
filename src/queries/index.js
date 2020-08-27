@@ -29,8 +29,8 @@ export const GET_CURRENT_USER = gql`
 
 // MOVIES
 export const GET_MOVIES = gql`
-  query movies {
-    movies {
+  query movies($sortBy: String) {
+    movies(sortBy: $sortBy) {
       _id
       name
       duration

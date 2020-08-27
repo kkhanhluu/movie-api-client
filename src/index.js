@@ -26,7 +26,6 @@ const store = createStore(rootReducer);
 const httpLink = new HttpLink({ uri: 'http://localhost:3000/graphql' });
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers
-  console.log('aaa');
   operation.setContext({
     headers: {
       authorization: `Bearer ${localStorage.getItem('token') || null}`,

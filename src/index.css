@@ -57,3 +57,11 @@ body {
   color: white !important;
   box-shadow: 0 4px var(--color-red);
 }
+
+.Dropdown-control {
+  font-size: 1.6rem !important;
+}
+
+.Dropdown-option {
+  font-size: 1.3rem !important;
+}

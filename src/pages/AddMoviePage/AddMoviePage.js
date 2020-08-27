@@ -73,7 +73,6 @@ const AddMoviePage = (props) => {
         ],
       });
     } else {
-      console.log(id);
       editMovie({
         variables: {
           id,

@@ -4,7 +4,6 @@ import classes from './MovieCard.module.scss';
 
 const MovieCard = (props) => {
   const { name, ratingsAverage, releaseDate, _id, coverImage } = props;
-  console.log(props);
   return (
     <figure className={classes.movie}>
       <div

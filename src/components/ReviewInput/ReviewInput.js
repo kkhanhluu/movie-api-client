@@ -17,7 +17,6 @@ const ReviewInput = (props) => {
       setReview('');
     },
     onError(error) {
-      console.log(typeof error);
       if (error.message.includes('E11000 duplicate key error collection')) {
         Swal.fire('Error!', 'You already made a review!', 'error');
       } else if (error.message.includes('Not authenticated')) {
