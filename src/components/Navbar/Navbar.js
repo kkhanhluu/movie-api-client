@@ -16,9 +16,12 @@ const Navbar = () => {
         <div className={classes.rightContainer}>
           <nav className={classes.nav}>
             <ul>
-              <li className={classes.navItem}>Demos</li>
-              <li className={classes.navItem}>Features</li>
-              <li className={classes.navItem}>Contact</li>
+              <Link to='/movie/add' className={classes.navItem}>
+                Add Movie
+              </Link>
+              <Link to='/me/movies' className={classes.navItem}>
+                Your Movies
+              </Link>
             </ul>
           </nav>
           {!isAuthenticated ? (

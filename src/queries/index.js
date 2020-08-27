@@ -67,6 +67,21 @@ export const GET_MOVIE_BY_ID = gql`
   }
 `;
 
+export const GET_MOVIES_BY_USER = gql`
+  query moviesByUser($userId: String!) {
+    moviesByUser(userId: $userId) {
+      _id
+      name
+      duration
+      coverImage
+      releaseDate
+      actors
+      ratingsAverage
+      ratingsQuantity
+    }
+  }
+`;
+
 export const DELETE_MOVIE = gql`
   mutation deleteMovie($id: String!) {
     deleteMovie(id: $id)
@@ -81,17 +96,17 @@ export const CREATE_MOVIE = gql`
     $actors: [String!]!
     $coverImage: String!
   ) {
-    addMovie(
+    createMovie(
       name: $name
       releaseDate: $releaseDate
-      durationSeconds: $durationSeconds
+      duration: $duration
       actors: $actors
       coverImage: $coverImage
     ) {
-      id
+      _id
       name
       releaseDate
-      durationSeconds
+      duration
       actors
       coverImage
     }
@@ -100,23 +115,25 @@ export const CREATE_MOVIE = gql`
 
 export const EDIT_MOVIE = gql`
   mutation editMovie(
+    $id: String!
     $name: String!
     $releaseDate: String!
     $duration: Int!
     $actors: [String!]!
     $coverImage: String!
   ) {
-    addMovie(
+    editMovie(
+      id: $id
       name: $name
       releaseDate: $releaseDate
-      durationSeconds: $durationSeconds
+      duration: $duration
       actors: $actors
       coverImage: $coverImage
     ) {
-      id
+      _id
       name
       releaseDate
-      durationSeconds
+      duration
       actors
       coverImage
     }

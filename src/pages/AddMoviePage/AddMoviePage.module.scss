@@ -1,0 +1,63 @@
+.addMoviePage {
+  background-color: black;
+}
+
+.form {
+  width: 60%;
+  padding: 15px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+textarea.formControl {
+  height: 5rem;
+  padding: 1rem;
+}
+
+.formControl {
+  background-image: none !important;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.formControl:focus {
+  box-shadow: none !important;
+  background-color: #ffffff;
+}
+
+.formRow {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin-top: 1rem;
+  font-size: 10px;
+}
+
+.btnSubmit {
+  background-color: #6ad996;
+  color: #ffffff;
+  padding: 10px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.btnRow {
+  margin-top: 5rem;
+  .btn {
+    padding: 1rem 3rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--color-green);
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .formRow {
+    margin-bottom: 2rem;
+  }
+}

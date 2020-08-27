@@ -1,0 +1,78 @@
+.yourMoviesList {
+  padding: 2rem 12%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .movie {
+    margin: 5rem 0.625rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    margin-right: 5%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    .moviePosterContainer {
+      background: black;
+      padding: 3rem 0;
+      border-radius: 1rem;
+      overflow: hidden;
+      height: 287px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.8s ease;
+    }
+
+    .moviePosterContainer:hover {
+      cursor: pointer;
+    }
+
+    .movieTitle {
+      text-align: center;
+      text-transform: capitalize;
+      margin: 2rem auto;
+      color: var(--color-red);
+      font-size: 1.9rem;
+    }
+
+    .btnRow {
+      display: flex;
+      justify-content: space-around;
+
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.6rem;
+        text-decoration: none;
+      }
+
+      .btnEdit {
+        background-color: var(--color-green);
+      }
+
+      .btnDelete {
+        background-color: var(--color-red);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .movie {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie {
+    width: 80%;
+    margin-left: 5rem;
+  }
+}

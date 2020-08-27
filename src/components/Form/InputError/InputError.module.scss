@@ -1,0 +1,77 @@
+.errorContainer {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 100%;
+  white-space: nowrap;
+  line-height: 70px;
+  width: auto;
+  height: 70px;
+  background: #f16767;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media only screen and (min-width: 0px) and (max-width: 870px) {
+  .errorContainer {
+    position: relative;
+    top: -13px;
+    left: 0;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+    font-weight: 300;
+  }
+}
+.errorContainer.visible {
+  -o-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+@media only screen and (min-width: 0px) and (max-width: 870px) {
+  .errorContainer.visible {
+    height: 30px;
+  }
+}
+.errorContainer.invisible {
+  -o-transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  transform: translateX(-30px);
+  opacity: 0;
+  -webkit-animation-delay: 2s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 2s;
+}
+@media only screen and (min-width: 0px) and (max-width: 870px) {
+  .errorContainer.invisible {
+    height: 0;
+    line-height: 0;
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}

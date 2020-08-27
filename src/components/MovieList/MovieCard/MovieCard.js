@@ -24,9 +24,6 @@ const MovieCard = (props) => {
         </Link>
       </div>
       <figcaption className={classes.movieTitle}>{name}</figcaption>
-      <figcaption className={classes.movieDate}>
-        {new Date(+releaseDate).toLocaleDateString()}
-      </figcaption>
     </figure>
   );
 };
